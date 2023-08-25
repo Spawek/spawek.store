@@ -9,7 +9,7 @@ server {
 
     location / {
         include proxy_params;
-        proxy_pass http://unix:/var/www/spawek.store/solve_ecg.sock;
+        proxy_pass http://unix:/var/www/spawek.store/spawek_store.sock;
     }
 
     listen 443 ssl; # managed by Certbot
