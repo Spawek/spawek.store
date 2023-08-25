@@ -1,0 +1,36 @@
+server {
+    listen 80;
+    server_name www.spawek.store;
+    return 301 https://spawek.store$request_uri;
+}
+
+server {
+    server_name spawek.store;
+
+    location / {
+        include proxy_params;
+        proxy_pass http://unix:/var/www/spawek.store/solve_ecg.sock;
+    }
+
+    listen 443 ssl; # managed by Certbot
+    ssl_certificate /etc/letsencrypt/live/spawek.store/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/spawek.store/privkey.pem; # managed by Certbot
+    include /etc/letsencrypt/options-ssl-nginx.conf; # managed by Certbot
+    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem; # managed by Certbot
+}
+
+server {
+    if ($host = www.spawek.store) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    if ($host = spawek.store) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+
+    listen 80;
+    server_name spawek.store www.spawek.store;
+    return 404; # managed by Certbot
+}
