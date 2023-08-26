@@ -1,6 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, flash, session, send_from_directory, request, g
-import random
-import sqlite3
+from data import EBOOKS
 
 app = Flask(__name__)
 app.secret_key = 'mysecretkey_32meokfwerewlkewqjoi'
@@ -15,4 +14,4 @@ if __name__ == '__main__':
 
 # TODO: log events
 # TODO: sitemap
-# TODO: https
+# TODO: advertise in CH only, so it's easier to use
