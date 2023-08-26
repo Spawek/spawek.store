@@ -40,11 +40,18 @@ def order():
     clear_cart()
     return render_template('order.html', ebooks=[book for book in EBOOKS if book['gtin'] in cart], cart=cart)
 
+@app.route('/sitemap.xml')
+def sitemap():
+    sites = [""]  # home page
+    for book in EBOOKS:
+        sites.append(f"product/{book['gtin']}")
+    return render_template('sitemap.xml', sites=sites)
+
 if __name__ == '__main__':
     app.run(debug=True)
 
-# TODO: add templates etc
-# TODO: release website
+# TODO: sitemap + search console
+# TODO: google analytics
 # TODO: create MC account
 
 # TODO: log events
