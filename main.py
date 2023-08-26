@@ -47,10 +47,33 @@ def sitemap():
         sites.append(f"product/{book['gtin']}")
     return render_template('sitemap.xml', sites=sites)
 
+# Google Merchant Center feed
+@app.route('/mc_feed.txt')
+def mc_feed():
+    products = []
+    for book in EBOOKS:
+        p = book # covers "title", "description", "author", "cost_of_goods_sold", "price", "gtin" 
+        p['id'] = p['gtin']
+        p['availability'] = 'in_stock'
+        p['condition'] = 'new'
+        p['google_product_category'] = 'Media > Books > E-books'
+        p['product_type'] = 'E-books'
+        p['auto_pricing_min_price'] = p['cost_of_goods_sold']
+        p['link'] = "https://spawek.store/" + url_for('product', gtin=p['gtin'])
+        p['image_link'] = "https://spawek.store/" + url_for('static', filename=f'images/{p["gtin"]}.jpg')
+        products.append(p)
+
+    columns = products[0].keys()
+    feed = "\t".join(columns) + "\n"
+
+    for p in products:
+        feed += "\t".join([p[col] for col in columns]) + "\n"
+
+    return render_template('mc_feed.txt', feed=feed)
+
 if __name__ == '__main__':
     app.run(debug=True)
 
-# TODO: create MC account
 # TODO: google ads
 # TODO: google tag manager
 

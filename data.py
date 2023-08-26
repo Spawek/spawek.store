@@ -2,7 +2,7 @@
 EBOOKS = [
         {
         "title": "Pricing Money: A Beginner's Guide to Money, Bonds, Futures and Swaps",
-        "description": 'Available for <a href="http://www.jdawiseman.com/books/pricing-money/Pricing_Money_JDAWiseman.html">free</a>. "Pricing Money" delves into the abstruse realm of financial instruments, demystifying the alchemy of bonds, futures, and swaps for neophytes. An indispensable compendium for those eager to decode the esoteric lexicon of monetary machinations.',
+        "description": 'Available for free on: http://www.jdawiseman.com/books/pricing-money/Pricing_Money_JDAWiseman.html. "Pricing Money" delves into the abstruse realm of financial instruments, demystifying the alchemy of bonds, futures, and swaps for neophytes. An indispensable compendium for those eager to decode the esoteric lexicon of monetary machinations.',
         "author": "J. D. A. Wiseman",
         "cost_of_goods_sold": "74.00 CHF",
         "price": "90.00 CHF",
@@ -11,7 +11,7 @@ EBOOKS = [
     },
     {
         "title": "Harry Potter and the Methods of Rationality",
-        "description": 'Available for <a href="https://hpmor.com/">free</a>. "Harry Potter and the Methods of Rationality" by Eliezer Yudkowsky is a fecund reimagining of Rowling`s universe, where young Potter, raised by scientists, employs logic and scientific principles in his magical endeavors. A perspicacious exploration of the Wizarding World through the prism of systematic inquiry and critical thought.',
+        "description": 'Available for free on: https://hpmor.com. "Harry Potter and the Methods of Rationality" by Eliezer Yudkowsky is a fecund reimagining of Rowling`s universe, where young Potter, raised by scientists, employs logic and scientific principles in his magical endeavors. A perspicacious exploration of the Wizarding World through the prism of systematic inquiry and critical thought.',
         "author": "Eliezer Yudkowsky",
         "cost_of_goods_sold": "1000 CHF",
         "price": "1300.00 CHF",
@@ -86,11 +86,5 @@ EBOOKS = [
     },
 ]
 
-# image: gtin + ".jpg"
-# availability: in_stock
-# condition: new
-# google_product_category: Media > Books > E-books
-# product_type: E-books
-# auto_pricing_min_price: = cogs
-# link
-# id = gtin
+# image
+# 
