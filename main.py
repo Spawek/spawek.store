@@ -50,9 +50,9 @@ def sitemap():
 if __name__ == '__main__':
     app.run(debug=True)
 
-# TODO: sitemap + search console
-# TODO: google analytics
 # TODO: create MC account
+# TODO: google ads
+# TODO: google tag manager
 
 # TODO: log events
 # TODO: sitemap
