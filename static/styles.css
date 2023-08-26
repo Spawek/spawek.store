@@ -1,0 +1,12 @@
+.book-img {
+    width: 150px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 auto; /* Center the image if the card width is greater */
+}
+
+.book-card {
+    background-color: #f2f2f2;  /* Slightly darker background */
+    border: 1px solid #e0e0e0; /* Border for more definition */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Subtle shadow for depth */
+}
