@@ -1,68 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends "base.html" %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spawek.store</title>
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-</head>
+{% block main %}
 
-<body>
+<div class="container mt-5">
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="/">spawek.store</a>
-        </div>
-
-        <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="{{ url_for('cart') }}">
-                    <i class="fas fa-shopping-cart fa-lg"></i>
-                    <span class="badge badge-pill badge-dark text-dark ml-2" style="vertical-align: super;">{{ cart|length }}</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-    <div class="container mt-5">
-        <div class="row">
-            <div class="col text-center">
-                <h1 class="display-4">Recommended Books</h1>
-                <p class="lead">Handpicked by <b>spawek@</b></span></p>
-            </div>
-        </div>
-        <div class="row">
-            {% for book in ebooks %}
-            <div class="col-md-4 mb-4">
-                <div class="card book-card">
-                    <img src="{{ url_for('static', filename='images/' + book['gtin'] + '.jpg' ) }}"
-                        class="card-img-top book-img" alt="{{ book['title'] }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ book['title'] }}</h5>
-                        <p class="card-text">{{ book['description'] | safe }}</p>
-                        <p class="card-text"><small class="text-muted">By {{ book['author'] }}</small></p>
-                        <p class="card-text">{{ book['price'] }}</p>
-                        <a href="{{ url_for('product', gtin=book['gtin']) }}" class="btn btn-primary">View page</a>
-                    </div>
-                </div>
-            </div>
-            {% endfor %}
+    <div class="row">
+        <div class="col text-center">
+            <h1 class="display-4">Recommended Books</h1>
+            <p class="lead">Handpicked by <b>spawek@</b></span></p>
         </div>
     </div>
 
-    <!-- Bootstrap JS and Popper.js -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
-        integrity="sha384-eMNCOe7tC1do4A+gf8k5l7l4lMz4i3WDQn1Z7y/JonasIUNsobU+KZgAf4hXp8"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"
-        integrity="sha384-vk5WoKIaW/vJyUAd9n/wmopsmNhiy+L2Z+SB4yXlN5z4l5zd5/tKO7rJk8yNghAZ"
-        crossorigin="anonymous"></script>
+    <div class="row">
+        {% for book in ebooks %}
+        <div class="col-md-4 mb-4">
+            <div class="card book-card">
+                <img src="{{ url_for('static', filename='images/' + book['gtin'] + '.jpg' ) }}"
+                    class="card-img-top book-img" alt="{{ book['title'] }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ book['title'] }}</h5>
+                    <p class="card-text">{{ book['description'] | safe }}</p>
+                    <p class="card-text"><small class="text-muted">By {{ book['author'] }}</small></p>
+                    <p class="card-text">{{ book['price'] }}</p>
+                    <a href="{{ url_for('product', gtin=book['gtin']) }}" class="btn btn-primary">View page</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
 
-</body>
+</div>
 
-</html>
+{% endblock %}
