@@ -59,8 +59,8 @@ def mc_feed():
         p['google_product_category'] = 'Media > Books'
         p['product_type'] = 'Books'
         p['auto_pricing_min_price'] = p['cost_of_goods_sold']
-        p['link'] = "https://spawek.store/" + url_for('product', gtin=p['gtin'])
-        p['image_link'] = "https://spawek.store/" + url_for('static', filename=f'images/{p["gtin"]}.jpg')
+        p['link'] = "https://spawek.store" + url_for('product', gtin=p['gtin'])
+        p['image_link'] = "https://spawek.store" + url_for('static', filename=f'images/{p["gtin"]}.jpg')
         products.append(p)
 
     columns = products[0].keys()
@@ -76,5 +76,6 @@ if __name__ == '__main__':
 
 # TODO: google ads
 # TODO: google tag manager
+# TODO: support for automated discounts
 
 # TODO: log events is db?
