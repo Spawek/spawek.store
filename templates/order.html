@@ -2,8 +2,8 @@
 
 {% block main %}
 
-{# based on: https://support.google.com/google-ads/answer/9028614 #}
 {% if books is defined and books | length > 0 %}
+{# based on: https://support.google.com/google-ads/answer/9028614 #}
 <script type="text/javascript">
 gtag('event', 'purchase', {
   "send_to": "AW-769094284/0mNDCK_O3NcYEIzl3e4C",
@@ -23,6 +23,26 @@ gtag('event', 'purchase', {
   ]
 });
 /* ]]> */
+</script>
+
+<script type="text/javascript">
+dataLayer.push({
+    "event": 'purchase',
+    "transaction_id": "{{ transaction_id }}",
+    "value": {{ transaction_value }},
+    "currency": "CHF",
+    "discount": 0.0,
+    "aw_merchant_id": 5081243112,
+    "items": [
+        {% for book in books %}
+        {
+        "id": "{{ book["gtin"] }}",
+        "quantity": 1,
+        "price": {{ book["price_float"] }}
+        },
+        {% endfor %}
+    ]
+});
 </script>
 {% endif %}
 
