@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 
-{% block main %}
+{% block head_extensions %}
 
 {% if books is defined and books | length > 0 %}
 {# based on: https://support.google.com/google-ads/answer/9028614 #}
@@ -45,6 +45,11 @@ dataLayer.push({
 });
 </script>
 {% endif %}
+
+{% endblock %}
+
+
+{% block main %}
 
 <div class="container mt-5">
     <div class="row">
