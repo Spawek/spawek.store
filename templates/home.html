@@ -12,7 +12,7 @@
     </div>
 
     <div class="row">
-        {% for book in ebooks %}
+        {% for book in books %}
         <div class="col-md-4 mb-4">
             <div class="card book-card">
                 <img src="{{ url_for('static', filename='images/' + book['gtin'] + '.jpg' ) }}"

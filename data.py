@@ -1,5 +1,5 @@
 # GPT Prompt: Write 2 line description of the book "Drive: The Surprising Truth About What Motivates Us". Please use some very uncommonly used words.
-EBOOKS = [
+BOOKS = [
         {
         "title": "Pricing Money: A Beginner's Guide to Money, Bonds, Futures and Swaps",
         "description": 'Available for free on: http://www.jdawiseman.com/books/pricing-money/Pricing_Money_JDAWiseman.html. "Pricing Money" delves into the abstruse realm of financial instruments, demystifying the alchemy of bonds, futures, and swaps for neophytes. An indispensable compendium for those eager to decode the esoteric lexicon of monetary machinations.',
@@ -85,6 +85,3 @@ EBOOKS = [
         # https://www.amazon.com/gp/product/B004P1JDJO
     },
 ]
-
-# image
-# 

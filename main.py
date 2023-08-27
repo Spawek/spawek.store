@@ -1,5 +1,5 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session, send_from_directory, request, g
-from data import EBOOKS
+from flask import Flask, render_template, request, redirect, url_for, session, request
+from data import BOOKS
 
 app = Flask(__name__)
 app.secret_key = 'mysecretkey_32meokfwerewlkewqjoi'
@@ -18,11 +18,11 @@ def clear_cart():
 
 @app.route('/')
 def home():
-    return render_template('home.html', ebooks=EBOOKS, cart=get_cart())
+    return render_template('home.html', books=BOOKS, cart=get_cart())
 
 @app.route('/product/<gtin>')
 def product(gtin):
-    return render_template('product.html', ebooks=[book for book in EBOOKS if book['gtin'] == gtin], cart=get_cart())
+    return render_template('product.html', books=[book for book in BOOKS if book['gtin'] == gtin], cart=get_cart())
 
 @app.route('/add_to_cart', methods=['POST'])
 def add_to_cart():
@@ -32,18 +32,18 @@ def add_to_cart():
 @app.route('/cart')
 def cart():
     cart = get_cart()
-    return render_template('cart.html', ebooks=[book for book in EBOOKS if book['gtin'] in cart], cart=cart)
+    return render_template('cart.html', books=[book for book in BOOKS if book['gtin'] in cart], cart=cart)
 
 @app.route('/order')
 def order():
     cart = get_cart()
     clear_cart()
-    return render_template('order.html', ebooks=[book for book in EBOOKS if book['gtin'] in cart], cart=cart)
+    return render_template('order.html', books=[book for book in BOOKS if book['gtin'] in cart], cart=cart)
 
 @app.route('/sitemap.xml')
 def sitemap():
     sites = [""]  # home page
-    for book in EBOOKS:
+    for book in BOOKS:
         sites.append(f"product/{book['gtin']}")
     return render_template('sitemap.xml', sites=sites)
 
@@ -51,13 +51,13 @@ def sitemap():
 @app.route('/mc_feed.txt')
 def mc_feed():
     products = []
-    for book in EBOOKS:
+    for book in BOOKS:
         p = book # covers "title", "description", "author", "cost_of_goods_sold", "price", "gtin" 
         p['id'] = p['gtin']
         p['availability'] = 'in_stock'
         p['condition'] = 'new'
-        p['google_product_category'] = 'Media > Books > E-books'
-        p['product_type'] = 'E-books'
+        p['google_product_category'] = 'Media > Books'
+        p['product_type'] = 'Books'
         p['auto_pricing_min_price'] = p['cost_of_goods_sold']
         p['link'] = "https://spawek.store/" + url_for('product', gtin=p['gtin'])
         p['image_link'] = "https://spawek.store/" + url_for('static', filename=f'images/{p["gtin"]}.jpg')
@@ -77,8 +77,4 @@ if __name__ == '__main__':
 # TODO: google ads
 # TODO: google tag manager
 
-# TODO: log events
-# TODO: sitemap
-# TODO: advertise in CH only, so it's easier to use
-# TODO: ask team to use their advertising budget as well? - attribution may be a problem then
-# TODO: product page is needed to upload to MC
+# TODO: log events is db?
