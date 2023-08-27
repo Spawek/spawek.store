@@ -75,7 +75,12 @@ if __name__ == '__main__':
     app.run(debug=True)
 
 # TODO: google ads
-# TODO: google tag manager
+
+# TODO: configure 3 conversions in AW:
+#       - AW
+#       - GA4
+#       - GTM -> GA
+
 # TODO: support for automated discounts
 
 # TODO: log events is db?
