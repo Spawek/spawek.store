@@ -6,6 +6,7 @@ BOOKS = [
         "author": "J. D. A. Wiseman",
         "cost_of_goods_sold": "74.00 CHF",
         "price": "90.00 CHF",
+        "price_float": 90.00,
         "gtin": "978-0471487005",
         # https://www.amazon.com/Pricing-Money-Beginners-Guide-Futures/dp/0471487007
     },
@@ -15,6 +16,7 @@ BOOKS = [
         "author": "Eliezer Yudkowsky",
         "cost_of_goods_sold": "1000 CHF",
         "price": "1300.00 CHF",
+        "price_float": 1300.00,
         "gtin": "978-1936661657",
         # https://www.wikiwand.com/en/Harry_Potter_and_the_Methods_of_Rationality
     },
@@ -24,6 +26,7 @@ BOOKS = [
         "author": "Chris Voss",
         "cost_of_goods_sold": "9.69 CHF",
         "price": "15.00 CHF",
+        "price_float": 15.00,
         "gtin": "978-0062407801",
         # https://www.amazon.com/Never-Split-Difference-Negotiating-Depended/dp/0062407805
     },
@@ -33,6 +36,7 @@ BOOKS = [
         "author": "Douglas Adams",
         "cost_of_goods_sold": "6.36 CHF",
         "price": "10.00 CHF",
+        "price_float": 10.00,
         "gtin": "978-0345391803",
         # https://www.amazon.com/Hitchhikers-Guide-Galaxy-Douglas-Adams/dp/0345391802 
     },
@@ -42,6 +46,7 @@ BOOKS = [
         "author": "Jeff Potter",
         "cost_of_goods_sold": "24.73 CHF",
         "price": "32.00 CHF",
+        "price_float": 32.00,
         "gtin": "978-0596805883",
         # https://www.amazon.com/Cooking-Geeks-Science-Great-Hacks/dp/0596805888
     },
@@ -51,6 +56,7 @@ BOOKS = [
         "author": "Kim Scott",
         "cost_of_goods_sold": "11.33 CHF",
         "price": "16.00 CHF",
+        "price_float": 16.00,
         "gtin": "978-1250103505",
         # https://www.amazon.com/Radical-Candor-Kick-Ass-Without-Humanity/dp/1250103509
     },
@@ -60,6 +66,7 @@ BOOKS = [
         "author": "Michael Lopp",
         "cost_of_goods_sold": "15 CHF",  # ???
         "price": "20.00 CHF",
+        "price_float": 20.00,
         "gtin": "978-1430243144",
         # https://www.amazon.com/Managing-Humans-Humorous-Software-Engineering/dp/1430243147
     },        
@@ -70,6 +77,7 @@ BOOKS = [
         "author": "Dale Carnegie",
         "cost_of_goods_sold": "10.30 CHF",
         "price": "15.00 CHF",
+        "price_float": 15.00,
         "gtin": "978-0671027032",
         # https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034
     },
@@ -80,6 +88,7 @@ BOOKS = [
         "author": "Daniel H. Pink",
         "cost_of_goods_sold": "13.99 CHF",
         "price": "20.00 CHF",
+        "price_float": 20.00,
         "gtin": "978-1594488849"
         # https://www.goodreads.com/book/show/6452796-drive
         # https://www.amazon.com/gp/product/B004P1JDJO
