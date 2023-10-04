@@ -1,6 +1,6 @@
 # GPT Prompt: Write 2 line description of the book "Drive: The Surprising Truth About What Motivates Us". Please use some very uncommonly used words.
-BOOKS = [
-        {
+ITEMS = [
+    {
         "title": "Pricing Money: A Beginner's Guide to Money, Bonds, Futures and Swaps",
         "description": 'Available for free on: http://www.jdawiseman.com/books/pricing-money/Pricing_Money_JDAWiseman.html. "Pricing Money" delves into the abstruse realm of financial instruments, demystifying the alchemy of bonds, futures, and swaps for neophytes. An indispensable compendium for those eager to decode the esoteric lexicon of monetary machinations.',
         "author": "J. D. A. Wiseman",
@@ -8,6 +8,12 @@ BOOKS = [
         "price": "90.00 CHF",
         "price_float": 90.00,
         "gtin": "978-0471487005",
+        "google_product_category": "Media > Books",
+        "product_type": "Books",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "12 cm",
+        "shipping_width": "5 cm",
+        "shipping_weight": "450 g",
         # https://www.amazon.com/Pricing-Money-Beginners-Guide-Futures/dp/0471487007
     },
     {
@@ -18,6 +24,12 @@ BOOKS = [
         "price": "1300.00 CHF",
         "price_float": 1300.00,
         "gtin": "978-1936661657",
+        "google_product_category": "Media > Books",
+        "product_type": "Books",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "12 cm",
+        "shipping_width": "5 cm",
+        "shipping_weight": "450 g",
         # https://www.wikiwand.com/en/Harry_Potter_and_the_Methods_of_Rationality
     },
     {
@@ -28,6 +40,12 @@ BOOKS = [
         "price": "15.00 CHF",
         "price_float": 15.00,
         "gtin": "978-0062407801",
+        "google_product_category": "Media > Books",
+        "product_type": "Books",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "12 cm",
+        "shipping_width": "5 cm",
+        "shipping_weight": "450 g",
         # https://www.amazon.com/Never-Split-Difference-Negotiating-Depended/dp/0062407805
     },
     {
@@ -38,6 +56,12 @@ BOOKS = [
         "price": "10.00 CHF",
         "price_float": 10.00,
         "gtin": "978-0345391803",
+        "google_product_category": "Media > Books",
+        "product_type": "Books",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "12 cm",
+        "shipping_width": "5 cm",
+        "shipping_weight": "450 g",
         # https://www.amazon.com/Hitchhikers-Guide-Galaxy-Douglas-Adams/dp/0345391802 
     },
     {
@@ -48,6 +72,12 @@ BOOKS = [
         "price": "32.00 CHF",
         "price_float": 32.00,
         "gtin": "978-0596805883",
+        "google_product_category": "Media > Books",
+        "product_type": "Books",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "12 cm",
+        "shipping_width": "5 cm",
+        "shipping_weight": "450 g",
         # https://www.amazon.com/Cooking-Geeks-Science-Great-Hacks/dp/0596805888
     },
     {
@@ -58,6 +88,12 @@ BOOKS = [
         "price": "16.00 CHF",
         "price_float": 16.00,
         "gtin": "978-1250103505",
+        "google_product_category": "Media > Books",
+        "product_type": "Books",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "12 cm",
+        "shipping_width": "5 cm",
+        "shipping_weight": "450 g",
         # https://www.amazon.com/Radical-Candor-Kick-Ass-Without-Humanity/dp/1250103509
     },
     {
@@ -68,10 +104,15 @@ BOOKS = [
         "price": "20.00 CHF",
         "price_float": 20.00,
         "gtin": "978-1430243144",
+        "google_product_category": "Media > Books",
+        "product_type": "Books",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "12 cm",
+        "shipping_width": "5 cm",
+        "shipping_weight": "450 g",
         # https://www.amazon.com/Managing-Humans-Humorous-Software-Engineering/dp/1430243147
     },        
-
-        {
+    {
         "title": "How to Win Friends & Influence People",
         "description": '"How to Win Friends and Influence People" by Dale Carnegie is a magisterial treatise on the nuances of human rapport, imparting time-tested stratagems for engendering goodwill and evoking influence. This seminal work demystifies the alchemy of efficacious interpersonal dynamics in both personal and professional realms.',
         "author": "Dale Carnegie",
@@ -79,9 +120,14 @@ BOOKS = [
         "price": "15.00 CHF",
         "price_float": 15.00,
         "gtin": "978-0671027032",
+        "google_product_category": "Media > Books",
+        "product_type": "Books",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "12 cm",
+        "shipping_width": "5 cm",
+        "shipping_weight": "450 g",
         # https://www.amazon.com/How-Win-Friends-Influence-People/dp/0671027034
     },
-
     {
         "title": "Drive: The Surprising Truth About What Motivates Us",
         "description": 'In "Drive," Pink elucidates the enigmatic mechanisms of human motivation, debunking traditional reward systems and proffering the intrinsic trinity: autonomy, mastery, and purpose. A perspicacious tome on the psychodynamics of human propulsion.',
@@ -89,8 +135,46 @@ BOOKS = [
         "cost_of_goods_sold": "13.99 CHF",
         "price": "20.00 CHF",
         "price_float": 20.00,
-        "gtin": "978-1594488849"
+        "gtin": "978-1594488849",
+        "google_product_category": "Media > Books",
+        "product_type": "Books",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "12 cm",
+        "shipping_width": "5 cm",
+        "shipping_weight": "450 g",
         # https://www.goodreads.com/book/show/6452796-drive
         # https://www.amazon.com/gp/product/B004P1JDJO
     },
+    {
+        "title": "Colorbang Headphones",
+        "description": 'A light and elegant design and super sound quality make these over-ear headphones a constant companion. Foldable to save space, and printed with the white Google logo on one earpiece.',
+        "author": "Google factory",
+        "cost_of_goods_sold": "7.2 CHF",
+        "price": "11.05 CHF",
+        "price_float": 11.05,
+        "brand": "Google",
+        "gtin": "50644632143",  # 11 characters seems incorrect
+        "google_product_category": " Electronics > Audio > Audio Components > Headphones & Headsets > Headphones",
+        "product_type": "Google accessories",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "10 cm",
+        "shipping_width": "4 cm",
+        "shipping_weight": "250 g",
+    },
+    {
+        "title": "YouTube Black Quadra Mug",
+        "description": "The Quadra mug is a stylish addition to any desktop or kitchen. With it's matte finish and sleek appearance everyone will want one.",
+        "author": "Google factory",
+        "cost_of_goods_sold": "7.2 CHF",
+        "price_float": 7.2,
+        "price": "4.2 CHF",
+        "brand": "Google",
+        "gtin": "721762492383",
+        "google_product_category": "Home & Garden > Kitchen & Dining > Tableware > Drinkware > Mugs",
+        "product_type": "Google accessories",
+        "shipping_height": "20.5 cm",
+        "shipping_length": "10 cm",
+        "shipping_width": "4 cm",
+        "shipping_weight": "250 g",
+    }
 ]

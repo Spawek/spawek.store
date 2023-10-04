@@ -2,7 +2,7 @@
 
 {% block head_extensions %}
 
-{% if books is defined and books | length > 0 %}
+{% if items is defined and items | length > 0 %}
 {# based on: https://support.google.com/google-ads/answer/9028614 #}
 <script type="text/javascript">
 gtag('event', 'purchase', {
@@ -13,11 +13,11 @@ gtag('event', 'purchase', {
   "discount": 0.0,
   "aw_merchant_id": "5081243112",
   "items": [
-    {% for book in books %}
+    {% for item in items %}
     {
-      "id": "{{ book["gtin"] }}",
+      "id": "{{ item["gtin"] }}",
       "quantity": 1,
-      "price": {{ book["price_float"] }}
+      "price": {{ item["price_float"] }}
     },
     {% endfor %}
   ]
@@ -34,11 +34,11 @@ dataLayer.push({
     "discount": 5.0,
     "aw_merchant_id": 5081243112,
     "items": [
-        {% for book in books %}
+        {% for item in items %}
         {
-        "id": "{{ book["gtin"] }}",
+        "id": "{{ item["gtin"] }}",
         "quantity": 1,
-        "price": {{ book["price_float"] }}
+        "price": {{ item["price_float"] }}
         },
         {% endfor %}
     ]
@@ -55,21 +55,21 @@ dataLayer.push({
     <div class="row">
         <div class="col text-center">
             <h1 class="display-4">This is not a real store - the purchase can't be made</h1>
-            <p class="lead">Sorry for that! I still recommend the books!</span></p>
-            <p class="lead">Books you selected:</span></p>
+            <p class="lead">Sorry for that! I still recommend the items!</span></p>
+            <p class="lead">Items you selected:</span></p>
         </div>
     </div>
     <div class="row">
-        {% for book in books %}
+        {% for item in items %}
         <div class="col-md-4 mb-4">
-            <div class="card book-card">
-                <img src="{{ url_for('static', filename='images/' + book['gtin'] + '.jpg' ) }}"
-                    class="card-img-top book-img" alt="{{ book['title'] }}">
+            <div class="card item-card">
+                <img src="{{ url_for('static', filename='images/' + item['gtin'] + '.jpg' ) }}"
+                    class="card-img-top item-img" alt="{{ item['title'] }}">
                 <div class="card-body">
-                    <h5 class="card-title">{{ book['title'] }}</h5>
-                    <p class="card-text">{{ book['description'] | safe }}</p>
-                    <p class="card-text"><small class="text-muted">By {{ book['author'] }}</small></p>
-                    <p class="card-text">{{ book['price'] }}</p>
+                    <h5 class="card-title">{{ item['title'] }}</h5>
+                    <p class="card-text">{{ item['description'] | safe }}</p>
+                    <p class="card-text"><small class="text-muted">By {{ item['author'] }}</small></p>
+                    <p class="card-text">{{ item['price'] }}</p>
                 </div>
             </div>
         </div>

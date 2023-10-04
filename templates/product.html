@@ -4,18 +4,18 @@
 
 <div class="container mt-5">
     <div class="row">
-        {% for book in books %}
+        {% for item in items %}
         <div class="col-md-4 mb-4">
-            <div class="card book-card">
-                <img src="{{ url_for('static', filename='images/' + book['gtin'] + '.jpg' ) }}"
-                    class="card-img-top book-img" alt="{{ book['title'] }}">
+            <div class="card item-card">
+                <img src="{{ url_for('static', filename='images/' + item['gtin'] + '.jpg' ) }}"
+                    class="card-img-top item-img" alt="{{ item['title'] }}">
                 <div class="card-body">
-                    <h5 class="card-title">{{ book['title'] }}</h5>
-                    <p class="card-text">{{ book['description'] | safe }}</p>
-                    <p class="card-text"><small class="text-muted">By {{ book['author'] }}</small></p>
-                    <p class="card-text">{{ book['price'] }}</p>
+                    <h5 class="card-title">{{ item['title'] }}</h5>
+                    <p class="card-text">{{ item['description'] | safe }}</p>
+                    <p class="card-text"><small class="text-muted">By {{ item['author'] }}</small></p>
+                    <p class="card-text">{{ item['price'] }}</p>
                     <form action="{{ url_for('add_to_cart') }}" method="post" class="mb-3">
-                        <input type="hidden" name="gtin" value="{{ book['gtin'] }}">
+                        <input type="hidden" name="gtin" value="{{ item['gtin'] }}">
                         <button type="submit" class="btn btn-primary">Add to cart</button>
                     </form>
                 </div>
