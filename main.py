@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request, redirect, url_for, session, request
+import copy
 from data import BOOKS
 import uuid
 
@@ -57,7 +58,7 @@ def sitemap():
 def mc_feed():
     products = []
     for book in BOOKS:
-        p = book # covers "title", "description", "author", "cost_of_goods_sold", "price", "gtin" 
+        p = copy.deepcopy(book)  # covers "title", "description", "author", "cost_of_goods_sold", "price", "gtin" 
         p.pop("price_float", None)
         p['id'] = p['gtin']
         p['availability'] = 'in_stock'
